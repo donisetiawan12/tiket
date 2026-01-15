@@ -43,40 +43,41 @@ Project ini dibuat untuk mensimulasikan sistem ticketing konser modern dengan fi
 ---
 ## 📁 Struktur Project
 
+```text
 tiket/
 ├── src/
-│ └── main/
-│ ├── java/
-│ │ └── (package controller, model, dll)
-│ │
-│ └── resources/
-│ └── META-INF/
-│ └── persistence.xml
+│   └── main/
+│       ├── java/
+│       │   └── (controller, model, dll)
+│       │
+│       └── resources/
+│           └── META-INF/
+│               └── persistence.xml
 │
 ├── webapp/
-│ ├── META-INF/
-│ ├── WEB-INF/
-│ │
-│ ├── images/
-│ ├── videos/
-│ │
-│ ├── index.jsp
-│ ├── login.jsp
-│ ├── cart.jsp
-│ ├── add_to_cart.jsp
-│ ├── dashboard_user.jsp
-│ │
-│ ├── admin_dashboard.jsp
-│ ├── admin_concerts.jsp
-│ ├── delete_concert.jsp
-│ └── delete_account.jsp
+│   ├── META-INF/
+│   ├── WEB-INF/
+│   │
+│   ├── images/
+│   ├── videos/
+│   │
+│   ├── index.jsp
+│   ├── login.jsp
+│   ├── cart.jsp
+│   ├── add_to_cart.jsp
+│   ├── dashboard_user.jsp
+│   │
+│   ├── admin_dashboard.jsp
+│   ├── admin_concerts.jsp
+│   ├── delete_concert.jsp
+│   └── delete_account.jsp
 │
 ├── db/
-│ └── database.sql
+│   └── database.sql
 │
 ├── pom.xml
 └── README.md
-
+```text
 
 ---
 

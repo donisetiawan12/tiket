@@ -5,8 +5,10 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Development-yellow)
 
-**THE HYPE MACHINE** adalah aplikasi **pemesanan tiket konser berbasis web** yang dikembangkan menggunakan **Java Server Pages (JSP)**, **Java (Servlet/JPA)**, dan **PostgreSQL**.  
-Project ini dibuat untuk mensimulasikan sistem ticketing konser modern dengan fitur **user & admin dashboard**.
+**THE HYPE MACHINE** adalah aplikasi **pemesanan tiket konser berbasis web** yang dikembangkan menggunakan  
+**Java Server Pages (JSP)**, **Java (Servlet & JPA)**, dan **PostgreSQL**.
+
+Project ini dibuat sebagai **simulasi sistem ticketing konser modern** dengan pemisahan **hak akses user dan admin**.
 
 ---
 
@@ -23,16 +25,16 @@ Project ini dibuat untuk mensimulasikan sistem ticketing konser modern dengan fi
 ### 🛠️ Admin
 - Login admin
 - Dashboard admin
-- Manajemen data konser (CRUD)
+- Manajemen data konser (Create, Read, Update, Delete)
 - Menghapus konser
-- Monitoring pemesanan tiket
+- Monitoring data pemesanan tiket
 
 ---
 
 ## 🧱 Teknologi yang Digunakan
 
 | Layer | Teknologi |
-|-----|----------|
+|------|----------|
 | Frontend | JSP, HTML, CSS |
 | Backend | Java, Servlet, JPA |
 | Database | PostgreSQL |
@@ -41,6 +43,7 @@ Project ini dibuat untuk mensimulasikan sistem ticketing konser modern dengan fi
 | IDE | NetBeans / VS Code |
 
 ---
+
 ## 📁 Struktur Project
 
 ```text
@@ -48,7 +51,9 @@ tiket/
 ├── src/
 │   └── main/
 │       ├── java/
-│       │   └── (controller, model, dll)
+│       │   └── controller/
+│       │   └── model/
+│       │   └── util/
 │       │
 │       └── resources/
 │           └── META-INF/
@@ -77,23 +82,18 @@ tiket/
 │
 ├── pom.xml
 └── README.md
-```text
+🗄️ Database
+Aplikasi ini menggunakan PostgreSQL sebagai database utama dengan konfigurasi JPA yang terdapat pada:
 
----
-
-## 🗄️ Database
-
-Database menggunakan **PostgreSQL** dengan konfigurasi JPA pada:
-
+text
+Salin kode
 src/main/resources/META-INF/persistence.xml
+Pastikan database sudah dibuat sebelum menjalankan aplikasi.
+
+Contoh pembuatan database:
 
 sql
 Salin kode
-
-Pastikan database sudah dibuat sebelum menjalankan aplikasi.
-
-Contoh:
-```sql
 CREATE DATABASE tiket_konser;
 ⚙️ Cara Menjalankan Project
 1️⃣ Clone Repository
@@ -105,26 +105,29 @@ Buka pgAdmin
 
 Buat database PostgreSQL
 
-Import file SQL dari folder /db
+Import file SQL dari folder:
 
-3️⃣ Konfigurasi Database
-Sesuaikan username & password PostgreSQL di:
-
-pgsql
+text
 Salin kode
-persistence.xml
+/db/database.sql
+3️⃣ Konfigurasi Database
+Sesuaikan username, password, dan nama database di file:
+
+text
+Salin kode
+src/main/resources/META-INF/persistence.xml
 4️⃣ Jalankan Aplikasi
-Deploy ke Apache Tomcat
+Deploy project ke Apache Tomcat
 
-Jalankan project dari IDE
+Jalankan dari IDE (NetBeans / VS Code)
 
-Akses di browser:
+Akses melalui browser:
 
 bash
 Salin kode
 http://localhost:8080/tiket
 🔐 Keamanan
-Autentikasi user & admin
+Autentikasi user dan admin
 
 Session management
 
@@ -135,14 +138,14 @@ Pemisahan hak akses admin & user
 🎯 Tujuan Project
 Project pembelajaran Java Web
 
-Tugas kampus / UAS PBO
+Tugas kampus / UTS / UAS PBO
 
-Simulasi sistem tiket konser
+Simulasi sistem pemesanan tiket konser
 
-backend Java developer
+Portfolio Backend Java Developer
 
 🚀 Pengembangan Selanjutnya
-Payment gateway integration
+Integrasi Payment Gateway
 
 QR Code tiket
 

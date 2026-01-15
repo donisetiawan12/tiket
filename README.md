@@ -43,7 +43,6 @@ Project ini dibuat sebagai **simulasi sistem ticketing konser modern** dengan pe
 | IDE | NetBeans / VS Code |
 
 ---
-
 ## 📁 Struktur Project
 
 ```text
@@ -51,9 +50,38 @@ tiket/
 ├── src/
 │   └── main/
 │       ├── java/
-│       │   └── controller/
-│       │   └── model/
+│       │   ├── controller/
+│       │   │   ├── LoginServlet.java
+│       │   │   ├── RegisterServlet.java
+│       │   │   ├── LogoutServlet.java
+│       │   │   ├── ConcertServlet.java
+│       │   │   ├── CartServlet.java
+│       │   │   ├── OrderServlet.java
+│       │   │   └── AdminServlet.java
+│       │   │
+│       │   ├── model/
+│       │   │   ├── User.java
+│       │   │   ├── Admin.java
+│       │   │   ├── Concert.java
+│       │   │   ├── Ticket.java
+│       │   │   ├── Cart.java
+│       │   │   └── Order.java
+│       │   │
+│       │   ├── dao/
+│       │   │   ├── UserDAO.java
+│       │   │   ├── ConcertDAO.java
+│       │   │   ├── CartDAO.java
+│       │   │   └── OrderDAO.java
+│       │   │
+│       │   ├── service/
+│       │   │   ├── AuthService.java
+│       │   │   ├── ConcertService.java
+│       │   │   └── OrderService.java
+│       │   │
 │       │   └── util/
+│       │       ├── DBUtil.java
+│       │       ├── HibernateUtil.java
+│       │       └── SessionUtil.java
 │       │
 │       └── resources/
 │           └── META-INF/
@@ -62,26 +90,86 @@ tiket/
 ├── webapp/
 │   ├── META-INF/
 │   ├── WEB-INF/
+│   │   ├── web.xml
+│   │   └── views/
+│   │       ├── user/
+│   │       │   ├── index.jsp
+│   │       │   ├── login.jsp
+│   │       │   ├── register.jsp
+│   │       │   ├── cart.jsp
+│   │       │   ├── checkout.jsp
+│   │       │   └── dashboard_user.jsp
+│   │       │
+│   │       └── admin/
+│   │           ├── admin_dashboard.jsp
+│   │           ├── admin_concerts.jsp
+│   │           ├── admin_orders.jsp
+│   │           └── admin_users.jsp
 │   │
-│   ├── images/
-│   ├── videos/
+│   ├── assets/
+│   │   ├── css/
+│   │   │   └── style.css
+│   │   ├── js/
+│   │   │   └── script.js
+│   │   └── images/
 │   │
-│   ├── index.jsp
-│   ├── login.jsp
-│   ├── cart.jsp
-│   ├── add_to_cart.jsp
-│   ├── dashboard_user.jsp
+│   ├── error/
+│   │   ├── 404.jsp
+│   │   └── 500.jsp
 │   │
-│   ├── admin_dashboard.jsp
-│   ├── admin_concerts.jsp
-│   ├── delete_concert.jsp
-│   └── delete_account.jsp
+│   └── index.jsp
 │
 ├── db/
-│   └── database.sql
+│   ├── database.sql
+│   └── sample_data.sql
+│
+├── logs/
+│   └── app.log
 │
 ├── pom.xml
+├── .gitignore
 └── README.md
+
+🧩 Penjelasan Fungsi Folder (Ringkas & Jelas)
+
+🔹 controller
+
+Menangani request dari user (Servlet):
+Login, register, cart, checkout
+Request admin & user
+
+🔹 model
+
+Entity JPA:
+Mapping tabel database
+Representasi data (User, Concert, Ticket)
+
+🔹 dao
+
+Akses database:
+Query CRUD
+Pisah logic DB dari controller
+
+🔹 service
+
+Business logic:
+Validasi
+Proses order
+Auth & role checking
+
+🔹 util
+
+Helper:
+Koneksi database
+Session handler
+Utility umum
+
+🔹 webapp/WEB-INF/views
+
+JSP tidak bisa diakses langsung
+Lebih aman & profesional
+
+
 🗄️ Database
 Aplikasi ini menggunakan PostgreSQL sebagai database utama dengan konfigurasi JPA yang terdapat pada:
 

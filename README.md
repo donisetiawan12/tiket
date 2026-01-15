@@ -41,14 +41,14 @@ Project ini dibuat untuk mensimulasikan sistem ticketing konser modern dengan fi
 | IDE | NetBeans / VS Code |
 
 ---
-
 ## 📁 Struktur Project
 
 tiket/
-│
 ├── src/
 │ └── main/
 │ ├── java/
+│ │ └── (package controller, model, dll)
+│ │
 │ └── resources/
 │ └── META-INF/
 │ └── persistence.xml
@@ -56,6 +56,7 @@ tiket/
 ├── webapp/
 │ ├── META-INF/
 │ ├── WEB-INF/
+│ │
 │ ├── images/
 │ ├── videos/
 │ │
@@ -76,8 +77,6 @@ tiket/
 ├── pom.xml
 └── README.md
 
-yaml
-Salin kode
 
 ---
 

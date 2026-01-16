@@ -1,2 +1,3 @@
 1. Hudzaifah Ar-rantisi: Pembuatan struktur website dengan JSP, postgreSql dan lainnya, monitoring tugas, laporan dan presentasi. 
 2. Adelia Juliani: Pembuatan desain logo dan banner, pembuatan database postgresql, pembuatan struktur halaman utama user, presentasi, pembuatan laporan.
+3. Nathania Belva Zerlina: pembuatan sistem autentikasi login & register, pembuatan laporan dan presentasi.
